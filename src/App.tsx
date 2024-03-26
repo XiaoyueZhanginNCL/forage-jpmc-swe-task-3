@@ -43,7 +43,7 @@ class App extends Component<{}, IState> {
     return (
       <div className="App">
         <header className="App-header">
-          Bank Merge & Co Task 3
+          Bank Merge & Co
         </header>
         <div className="App-content">
           <button className="btn btn-primary Stream-button" onClick={() => {this.getDataFromServer()}}>Start Streaming Data</button>

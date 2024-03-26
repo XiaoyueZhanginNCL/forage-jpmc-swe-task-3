@@ -23,8 +23,8 @@ class Graph extends Component<IProps, {}> {
     const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
 
     const schema = {
-      // price_abc: 'float',
-      // price_def: 'float',
+      price_abc: 'float',
+      price_def: 'float',
       radio: 'float',
       timestamp: 'date',
       upper_bound:'float',
@@ -40,10 +40,10 @@ class Graph extends Component<IProps, {}> {
       elem.load(this.table);
       elem.setAttribute('view', 'y_line');
       elem.setAttribute('row-pivots', '["timestamp"]');
-      elem.setAttribute('columns', '["ratio", "lower_bound", "upper_bound", "trigger_alert"]');
+      elem.setAttribute('columns', '["radio", "lower_bound", "upper_bound", "trigger_alert"]');
       elem.setAttribute('aggregates', JSON.stringify({
-        // price_abc: 'avg',
-        // price_def: 'avg',
+        price_abc: 'avg',
+        price_def: 'avg',
         radio: 'avg',
         upper_bound:'avg',
         lower_bound:'avg',
